@@ -6,6 +6,44 @@
 
 <h1>Index</h1>
 
+<div class="form-group">
+    <fieldset>
+        <legend>Search Filter</legend>
+        @*Open up a form that will go to the Filter method on the
+            Cars Controller with a POST request*@
+
+        @using (
+            Html.BeginForm(
+            "Filter",// Action method to run
+            "Beverages",// Controller that method is on
+            FormMethod.Post// The request type
+            )
+        )
+        {
+            @* Render out the AnitForgery Token for the fomr*@
+            @Html.AntiForgeryToken()
+
+            <label for="name">Name</label>
+            @Html.TextBox("name", ViewData["filterName"])
+            <label for="pack">Pack</label>
+            @Html.TextBox("pack", ViewData["filterPack"])
+            <label for="price">Min Price</label>
+            @Html.TextBox("min", ViewData["filterMin"])
+            <label for="price">Max Price</label>
+            @Html.TextBox("max", ViewData["filterMax"])
+
+            <input type ="Submit"
+                   value = "Filter"
+                   class ="btn btn-info pull-right" />
+
+        }
+
+    </fieldset>
+</div>
+<br />
+<br />
+
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
