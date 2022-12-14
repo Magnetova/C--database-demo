@@ -36,5 +36,17 @@ namespace cis237_assignment_6_tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
+        public void Contact()
+        {
+            // Arrange
+            var mockLogger = new Mock<ILogger<HomeController>>();
+            HomeController controller = new HomeController(mockLogger.Object);
+
+            // Act
+            ViewResult result = controller.Contact() as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
     }
 }
