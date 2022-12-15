@@ -2,6 +2,7 @@
 
 ## Author
 
+Cayden Greer
 
 
 ## Description
@@ -145,9 +146,11 @@ The following Bootstrap documentation should help you figure out how to add some
 | **Total**                               | **100**|
 
 ## Outside Resources Used
-
+Used bootstrap to add styling over the entire site.
+Used w3 schools css models to impliment into the default pages.
+used an online privacy policy generator.
 
 
 ## Known Problems, Issues, And/Or Errors in the Program
 
-
+Other than not looking super refined, I do not believe there are any issues in regards to the database aspect of the assignment.

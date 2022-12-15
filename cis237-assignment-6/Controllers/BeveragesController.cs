@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Cayden Greer
+//cis237 - Fall 2022
+// 12/15/2022
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -153,7 +157,7 @@ namespace cis237_assignment_6.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,Year,Make,Model,Type,Horsepower,Cylinders")] Beverage beverage)
+        public async Task<IActionResult> Edit(string id, [Bind("Id, Name, Pack, Price, Active")] Beverage beverage)
         {
             if (id != beverage.Id)
             {
